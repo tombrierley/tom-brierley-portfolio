@@ -9,3 +9,9 @@ $max-width: 1024px;
 
 // Define your breakpoints
 $mobile: new-breakpoint(max-width 768px 4);
+$medium: new-breakpoint(max-width 1024px 4);
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
