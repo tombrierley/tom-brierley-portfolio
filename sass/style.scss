@@ -1,0 +1,75 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "reset";
+@import "grid";
+@import "typography";
+@import "tooltip";
+@import "helpers";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+body {
+	background: #f1f1f1;
+}
+header {
+	height: 70px;
+	width: 100%;
+	padding:50px 0;
+	.logo {
+		a {
+			text-decoration: none;			
+		}
+	}
+	.icon {
+		svg {
+			width:25px;
+		}
+		
+	}
+}
+
+.intro {
+	h2 {
+		span {
+			text-decoration: underline;
+		}
+	}
+}
+
+.work-area {
+	margin-top: 80px;
+	.work {
+		margin-bottom: 30px;
+		font-size: 0.8rem;
+		@include omega(3n);
+		text-transform: uppercase;
+		color:#1d1d1d;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		strong {
+			font-weight: 600;
+		}
+		small {
+			text-transform: none;
+			letter-spacing: 0;
+			font-size: 0.7rem;
+			color:#999;
+		}
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
