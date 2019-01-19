@@ -136,6 +136,8 @@ header {
         width: 100%; }
         header .links:last-child {
           margin-right: 0; } }
+    header .links a {
+      text-decoration: none; }
   header .icon svg {
     width: 25px; }
 
