@@ -1,7 +1,6 @@
 import React, { useContext, FunctionComponent } from 'react';
 import Head from 'next/head';
 
-import ProjectList from '../components/ProjectList';
 import Typography from '../components/Typography';
 import Section from '../components/Section';
 import Tag from '../components/Tag';
@@ -12,9 +11,7 @@ import { Content } from '../types';
 
 const Home: FunctionComponent = () => {
   const {
-    intro,
     about,
-    projects,
     interests,
     contactEmail,
     metaTitle,
@@ -28,12 +25,6 @@ const Home: FunctionComponent = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
       </Head>
-
-      <Section size="medium" setThemeOnEntry="dark">
-        <Typography as="h3" type="h1" line>
-          {intro}
-        </Typography>
-      </Section>
 
       <Section size="medium" setThemeOnEntry="dark">
         <Typography as="h2" type="h1" line marginBottomLarge>
@@ -66,14 +57,6 @@ const Home: FunctionComponent = () => {
           {howIWork}
         </Typography>
       </Section>
-
-      <Section size="medium" setThemeOnEntry="light">
-        <Typography as="h2" type="h1" line>
-          Work
-        </Typography>
-      </Section>
-
-      <ProjectList projects={projects} />
 
       <Section center setThemeOnEntry="light">
         <Typography as="h2" type="h1" line marginBottom center>

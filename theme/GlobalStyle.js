@@ -4,7 +4,7 @@ import { normalize } from 'styled-normalize';
 const GlobalStyle = createGlobalStyle`${({ theme }) => `
   ${normalize}
 
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,400i,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap');
 
   *,
   *:before,
@@ -17,13 +17,8 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
   }
 
   ::selection {
-    color: ${theme.colors.white};
-    background: ${theme.colors.black};
-  }
-
-  ::-moz-selection {
-    color: ${theme.colors.white};
-    background: ${theme.colors.black};
+    color: ${theme.colors.backgroundColor};
+    background: ${theme.colors.textColor};
   }
 
   html,
@@ -32,20 +27,29 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
     -moz-osx-font-smoothing: grayscale;
     -webkit-backface-visibility: hidden;
     -webkit-font-smoothing: antialiased !important;
-    background-color: ${theme.colors.black}; 
-    color: ${theme.base.fontColor};
+    background-color: ${theme.colors.backgroundColor}; 
+    color: ${theme.colors.textColor};
+    display: flex;
     font-family: ${theme.base.fontFamily};
     font-size: ${theme.base.fontSize};
     font-weight: normal;
-    height: 100%;
     line-height: 1.6;
     margin: 0;
     min-height: 100%;
     min-width: 320px;
     position: relative;
     text-rendering: optimizeLegibility !important;
+    transition-duration: ${theme.base.transitionSpeed};
+    transition-property: background-color, color;
+    transition-timing-function: ${theme.easing.move};
+    transform-origin: center center;
     width: 100%;
     z-index: 0;
+
+    & > div {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   a[href*="mailto:"] {
@@ -61,17 +65,6 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
     padding: 0;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family:  ${theme.base.headingFontFamily};
-    color: ${theme.colors.black};
-    margin-bottom: ${theme.spacing.small};
-    margin-top: 0;
-  }
 
   {/* Reset Lists */}
   ul,
@@ -93,12 +86,8 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
   }
 
   a {
-    color: ${theme.colors.green500};
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: none;
-    }
+    color: ${theme.colors.textColor};
+    text-decoration: none;
   }
 
   p {
@@ -131,6 +120,13 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
     transition-property: background-color, color, opacity, border, border-left, border-right, border-color, transform, fill;
     transition-timing-function: ${theme.easing.move};
     transform-origin: center center;
+
+    &:after, &:before {
+      transition-duration: ${theme.base.transitionSpeed};
+      transition-property: background-color, color, opacity, border, border-left, border-right, border-color, transform, fill;
+      transition-timing-function: ${theme.easing.move};
+      transform-origin: center center;
+    }
   }
 `}`;
 

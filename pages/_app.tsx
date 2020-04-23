@@ -1,20 +1,23 @@
 import React from 'react';
 import { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
 
 import Layout from '../components/Layout';
 
 import GlobalStyle from '../theme/GlobalStyle';
-import main from '../theme/main';
+
+import { ContentProvider } from '../state/ContentContext';
+import { ThemeColorProvider } from '../state/ThemeColorProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={main}>
-      <Layout>
+    <ContentProvider>
+      <ThemeColorProvider>
         <GlobalStyle />
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeColorProvider>
+    </ContentProvider>
   );
 }
 
