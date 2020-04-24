@@ -7,7 +7,9 @@ type ButtonProps = {
 };
 
 const Button: FunctionComponent<ButtonProps> = ({ href, children }) => (
-  <ButtonWrapper href={href}>{children}</ButtonWrapper>
+  <ButtonWrapper rel="noreferrer noopener" target="_blank" href={href}>
+    {children}
+  </ButtonWrapper>
 );
 
 const ButtonWrapper = styled.a(
