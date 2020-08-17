@@ -16,6 +16,8 @@ const initialContent = {
   interests: [
     'React',
     'React Hooks',
+    'ESNext',
+    'Progressive Web Apps',
     'Redux',
     'TypeScript',
     'Jest',
@@ -32,14 +34,32 @@ const initialContent = {
     'Prettier',
   ],
   projects: [
-    // {
-    //   id: '1',
-    //   title: 'Leon',
-    //   description:
-    //     'A CMS Driven staticially generated React, Redux and
-    // Next site for the naturually fast food chain Leon.',
-    //   tags: ['React', 'Redux', 'SCSS', 'BEM', 'Next'],
-    // },
+    {
+      id: '0',
+      title: 'Leon',
+      description:
+        'A CMS Driven staticially generated React, Redux and Next site for the naturually fast food chain Leon.',
+      tags: ['React', 'Redux', 'SCSS', 'BEM', 'Next'],
+      image: '/work/leon.png',
+      url: 'https://leon.co/presents/',
+    },
+    {
+      id: '1',
+      title: 'CareersKitchen',
+      description:
+        'Front End Web Application and Back End API for new psychology based careers coaching startup.',
+      tags: [
+        'React',
+        'Apollo',
+        'GraphQL',
+        'Node',
+        'Gatsby',
+        'UI Design',
+        'UX Design',
+      ],
+      image: '/work/careerskitchen.png',
+      url: 'https://www.careerskitchen.com/',
+    },
     {
       id: '2',
       title: 'Finmo',
