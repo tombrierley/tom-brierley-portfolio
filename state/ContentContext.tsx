@@ -16,6 +16,8 @@ const initialContent = {
   interests: [
     'React',
     'React Hooks',
+    'ESNext',
+    'Progressive Web Apps',
     'Redux',
     'TypeScript',
     'Jest',
