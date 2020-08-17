@@ -27,6 +27,9 @@ const Home: FunctionComponent = () => {
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:url" content="http://tombrierley.com/" />
+        <meta property="og:image" content="/ogimage.png" />
       </Head>
 
       <Section size="medium" setThemeOnEntry="dark">
