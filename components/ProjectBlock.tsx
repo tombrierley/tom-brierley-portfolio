@@ -1,3 +1,4 @@
+'use client'
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
@@ -35,7 +36,7 @@ const ProjectBlock: FunctionComponent<Project> = ({
 
           <TagWrapper>
             {tags.map((tag) => (
-              <Tag>{tag}</Tag>
+              <Tag key={tag}>{tag}</Tag>
             ))}
           </TagWrapper>
 

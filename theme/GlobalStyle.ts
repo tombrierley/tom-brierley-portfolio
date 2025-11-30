@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const GlobalStyle = createGlobalStyle`${({ theme }) => `
+import { Theme } from './main';
+
+const GlobalStyle = createGlobalStyle<{ theme: Theme }>`${({ theme }) => `
   ${normalize}
 
   @import url('https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap');
@@ -66,7 +68,7 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
   }
 
 
-  {/* Reset Lists */}
+  /* Reset Lists */
   ul,
   ol {
     list-style: none;
@@ -74,7 +76,7 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => `
     padding: 0;
   }
 
-  {/* Images */}
+  /* Images */
   figure {
     margin: 0;
   }

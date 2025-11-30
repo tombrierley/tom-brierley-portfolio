@@ -1,3 +1,4 @@
+'use client';
 import React, {
   ReactNode,
   FunctionComponent,
@@ -16,7 +17,7 @@ type SectionProps = {
   children: ReactNode;
   size?: string;
   setThemeOnEntry?: string;
-  center?: boolean | false;
+  center?: boolean;
 };
 
 const Section: FunctionComponent<SectionProps> = ({
@@ -50,8 +51,8 @@ const Section: FunctionComponent<SectionProps> = ({
     const rect = container!.current!.getBoundingClientRect();
 
     if (
-      rect.top < window.innerHeight / 2
-      && rect.top + container.current.offsetHeight > window.innerHeight / 2
+      rect.top < window.innerHeight / 2 &&
+      rect.top + container.current.offsetHeight > window.innerHeight / 2
     ) {
       handleSetInView();
     } else {
@@ -79,7 +80,7 @@ const Section: FunctionComponent<SectionProps> = ({
   );
 };
 
-type SectionStyleProps = { size?: string; center?: boolean | false };
+type SectionStyleProps = { size?: string; center?: boolean };
 
 const StyledSection = styled.section<SectionStyleProps>(
   ({ theme, size, center }) => `
@@ -90,7 +91,7 @@ const StyledSection = styled.section<SectionStyleProps>(
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
   }
 

@@ -1,3 +1,5 @@
+'use client'
+
 import React, {
   useReducer,
   ReactNode,
@@ -8,6 +10,7 @@ import React, {
 import { ThemeProvider } from 'styled-components';
 
 import { lightTheme, darkTheme } from '../theme/main';
+import GlobalStyle from '../theme/GlobalStyle';
 
 type ProviderProps = {
   children: ReactNode;
@@ -53,6 +56,7 @@ export const ThemeColorProvider: FunctionComponent<ProviderProps> = ({
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>
       <ThemeProvider theme={state.darkMode ? darkTheme : lightTheme}>
+        <GlobalStyle />
         {children}
       </ThemeProvider>
     </ThemeContext.Provider>

@@ -1,3 +1,4 @@
+'use client'
 import React, { FunctionComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 

@@ -1,3 +1,4 @@
+'use client'
 // Import Dependencies
 import React, { useEffect, useState, FunctionComponent } from 'react';
 import styled from 'styled-components';

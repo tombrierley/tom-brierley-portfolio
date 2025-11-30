@@ -64,7 +64,7 @@ const main = {
 
   components: {
     sectionWidthSmall: '640px',
-    sectionWidthMedium: '720px',
+    sectionWidthMedium: '840px',
     sideBarWidth: '80px',
   },
 

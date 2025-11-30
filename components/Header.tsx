@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FunctionComponent, useContext } from 'react';
 import styled from 'styled-components';
 
@@ -5,7 +7,6 @@ import ContentContext from '../state/ContentContext';
 import Typography from './Typography';
 
 import LinkedInIcon from '../assets/icons/linked';
-import InstagramIcon from '../assets/icons/instagram';
 import GitHubIcon from '../assets/icons/github';
 
 import { visuallyHidden } from '../theme/utils';
@@ -45,17 +46,6 @@ const Header: FunctionComponent<HeaderProps> = () => {
             <span>Tom Brierley Github</span>
           </a>
         </li>
-
-        <li>
-          <a
-            href="https://www.instagram.com/brierley_te/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon />
-            <span>Tom Brierley Instagram</span>
-          </a>
-        </li>
       </SocialNav>
     </LeftFixedBar>
   );
@@ -66,6 +56,7 @@ const LeftFixedBar = styled.header(
     display: flex;
     height: ${theme.components.sideBarWidth};
     padding: 0 ${theme.spacing.large};
+    white-space: nowrap;
 
     @media (${theme.breakpoints.medium}) {
       align-items: flex-start;
@@ -93,7 +84,7 @@ const Logo = styled.a(
       margin: 0;
       transform: rotate(-90deg) translateX(-100%);
       transform-origin: left top;
-      height: ${theme.components.sideBarWidth}
+      height: ${theme.components.sideBarWidth};
       white-space: nowrap;
 
       &:after {

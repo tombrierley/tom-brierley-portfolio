@@ -1,21 +1,49 @@
-export type Project = {
+export interface ServiceItem {
+  title: string;
+  description: string;
+  details: string[];
+}
+
+export interface WorkStep {
+  title: string;
+  description: string;
+}
+
+export interface Technology {
+  category: string;
+  items: string[];
+}
+
+export interface Client {
+  name: string;
+}
+
+export interface Project {
   id: string;
   title: string;
   description: string;
   tags: string[];
   image: string;
   url?: string | '';
-};
+}
 
-export type Content = {
+export interface Content {
   name: string;
   contactEmail: string;
   location: string;
-  intro: string;
-  about: string;
-  interests: string[];
-  projects: Project[];
+  introduction: string;
+  introText: string;
+  services: ServiceItem[];
+  workProcess: WorkStep[];
+  technologies: Technology[];
+  clients: Client[];
   metaTitle: string;
   metaDescription: string;
-  howIWork: string;
-};
+  startProjectText: string;
+  // Legacy props for backward compatibility
+  intro?: string;
+  about?: string;
+  projects?: Project[];
+  interests?: string[];
+  howIWork?: string;
+}

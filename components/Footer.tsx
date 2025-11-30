@@ -1,3 +1,4 @@
+'use client';
 import React, { FunctionComponent, useContext } from 'react';
 import styled from 'styled-components';
 
@@ -33,6 +34,7 @@ const RightFixedBar = styled.footer(
     display: flex;
     height: ${theme.components.sideBarWidth};
     padding: 0 ${theme.spacing.large};
+    white-space: nowrap;
 
     @media (${theme.breakpoints.medium}) {
       bottom: 0;
@@ -58,7 +60,7 @@ const Email = styled.a(
       margin: 0;
       transform: rotate(90deg) translateX(100%);
       transform-origin: right top;
-      height: ${theme.components.sideBarWidth}
+      height: ${theme.components.sideBarWidth};
       white-space: nowrap;
 
       &:before {
@@ -115,7 +117,7 @@ const Location = styled.div(
       margin: auto 0 0 0;
       transform: rotate(90deg) translateX(64%);
       transform-origin: right top;
-      height: ${theme.components.sideBarWidth}
+      height: ${theme.components.sideBarWidth};
       white-space: nowrap;
     }
   `,
