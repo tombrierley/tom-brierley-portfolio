@@ -18,6 +18,7 @@ type SectionProps = {
   size?: string;
   setThemeOnEntry?: string;
   center?: boolean;
+  id?: string;
 };
 
 const Section: FunctionComponent<SectionProps> = ({
@@ -25,6 +26,7 @@ const Section: FunctionComponent<SectionProps> = ({
   size,
   setThemeOnEntry,
   center,
+  id,
 }) => {
   const { state, dispatch } = useContext(ThemeContext);
   const container = useRef<HTMLElement>(null);
@@ -74,7 +76,7 @@ const Section: FunctionComponent<SectionProps> = ({
   }, []);
 
   return (
-    <StyledSection size={size} center={center} ref={container}>
+    <StyledSection size={size} center={center} ref={container} id={id}>
       {children}
     </StyledSection>
   );
