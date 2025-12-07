@@ -1,16 +1,16 @@
-import React from 'react'
-import type { Metadata } from 'next'
-import { Providers } from './providers'
-import '../styles/globals.css'
+import React from 'react';
+import type { Metadata } from 'next';
+import { Providers } from './providers';
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title:
-    'Tom Brierley - AI Developer London | Expert in OpenAI, LangChain & AWS Bedrock',
+    'Tom Brierley - Software Engineer & Developer London | AI Integrations & Custom Models Expert',
   description:
-    'London-based AI Developer with 14+ years experience. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock. Specializing in rapid prototyping, intelligent agents, and seamless AI integration for businesses.',
+    'London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
   keywords: [
-    'AI Developer London',
-    'AI Developer UK',
+    'Software Engineer London',
+    'Software Engineer UK',
     'OpenAI Developer',
     'LangChain Expert',
     'AWS Bedrock',
@@ -25,33 +25,33 @@ export const metadata: Metadata = {
     'TypeScript AI Development',
     'London Tech Consultant',
   ],
-  authors: [{ name: 'Tom Brierley', url: 'https://tombrierley.com' }],
+  authors: [{ name: 'Tom Brierley', url: 'https://tombrierley.co.uk' }],
   creator: 'Tom Brierley',
   publisher: 'Tom Brierley',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://tombrierley.com',
+    url: 'https://tombrierley.co.uk',
     title:
-      'Tom Brierley - AI Developer London | Expert in OpenAI, LangChain & AWS Bedrock',
+      'Tom Brierley - Software Engineer & Developer London | AI Integrations & Custom Models Expert',
     description:
-      'London-based AI Developer with 14+ years experience. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
+      'London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
     siteName: 'Tom Brierley Portfolio',
     images: [
       {
         url: '/ogimage.png',
         width: 1200,
         height: 630,
-        alt: 'Tom Brierley - AI Developer London',
+        alt: 'Tom Brierley - Software Engineer & Developer London',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title:
-      'Tom Brierley - AI Developer London | Expert in OpenAI, LangChain & AWS Bedrock',
+      'Tom Brierley - Software Engineer & Developer London | AI Integrations & Custom Models Expert',
     description:
-      'London-based AI Developer with 14+ years experience. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
+      'London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
     images: ['/ogimage.png'],
   },
   robots: {
@@ -68,6 +68,19 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  other: {
+    'theme-color': '#000000',
+    'color-scheme': 'dark light',
+    'format-detection': 'telephone=no',
+    'AI-content-summary':
+      'Portfolio of Tom Brierley, a Software Engineer & Developer in London specializing in AI integrations, custom trained models, and AI-powered application development using OpenAI, LangChain, and AWS Bedrock.',
+    'AI-expertise-areas':
+      'AI Integration, Custom Model Development, OpenAI, LangChain, AWS Bedrock, RAG Systems, PEFT, React, Next.js, TypeScript',
+    'AI-service-type':
+      'Software Development, AI Consulting, Custom AI Model Development',
+    'AI-location': 'London, United Kingdom',
+  },
+  category: 'technology',
 };
 
 interface RootLayoutProps {
@@ -76,7 +89,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -87,12 +100,28 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
           rel="stylesheet"
+          media="print"
+          onLoad="this.media='all'"
         />
-        <link rel="canonical" href="https://tombrierley.com" />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+        <link rel="canonical" href="https://tombrierley.co.uk" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="geo.region" content="GB-LND" />
         <meta name="geo.placename" content="London" />
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Tom Brierley" />
+        <link rel="preconnect" href="https://tombrierley.co.uk" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,13 +130,13 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
               '@graph': [
                 {
                   '@type': 'Person',
-                  '@id': 'https://tombrierley.com/#person',
+                  '@id': 'https://tombrierley.co.uk/#person',
                   name: 'Tom Brierley',
-                  jobTitle: 'AI Developer',
+                  jobTitle: 'Software Engineer & Developer',
                   description:
-                    'London-based AI Developer with 14+ years experience specializing in OpenAI, LangChain, and AWS Bedrock applications. Expert in AI-powered application development, custom model creation, and intelligent automation.',
-                  url: 'https://tombrierley.com',
-                  email: 'hello@tombrierley.com',
+                    'London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models. Expert in AI-powered application development, custom model creation, and intelligent automation.',
+                  url: 'https://tombrierley.co.uk',
+                  email: 'hello@tombrierley.co.uk',
                   telephone: '+44',
                   address: {
                     '@type': 'PostalAddress',
@@ -145,7 +174,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                   ],
                   hasOccupation: {
                     '@type': 'Occupation',
-                    name: 'AI Developer',
+                    name: 'Software Engineer & Developer',
                     occupationLocation: {
                       '@type': 'City',
                       name: 'London',
@@ -167,7 +196,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                   worksFor: {
                     '@type': 'Organization',
                     name: 'Tom Brierley AI Development',
-                    url: 'https://tombrierley.com',
+                    url: 'https://tombrierley.co.uk',
                   },
                   memberOf: [
                     {
@@ -181,7 +210,8 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                     {
                       '@type': 'EducationalOrganization',
                       name: 'Technology Industry',
-                      description: '14+ years of software development experience',
+                      description:
+                        '10+ years of software development experience',
                     },
                   ],
                   sameAs: [
@@ -190,24 +220,25 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                   ],
                   image: {
                     '@type': 'ImageObject',
-                    url: 'https://tombrierley.com/ogimage.png',
-                    caption: 'Tom Brierley - AI Developer London',
+                    url: 'https://tombrierley.co.uk/ogimage.png',
+                    caption:
+                      'Tom Brierley - Software Engineer & Developer London',
                   },
                 },
                 {
                   '@type': 'Organization',
-                  '@id': 'https://tombrierley.com/#organization',
+                  '@id': 'https://tombrierley.co.uk/#organization',
                   name: 'Tom Brierley AI Development',
-                  url: 'https://tombrierley.com',
+                  url: 'https://tombrierley.co.uk',
                   logo: {
                     '@type': 'ImageObject',
-                    url: 'https://tombrierley.com/ogimage.png',
+                    url: 'https://tombrierley.co.uk/ogimage.png',
                   },
                   contactPoint: {
                     '@type': 'ContactPoint',
                     telephone: '+44',
                     contactType: 'Customer Service',
-                    email: 'hello@tombrierley.com',
+                    email: 'hello@tombrierley.co.uk',
                     areaServed: ['GB', 'EU', 'US'],
                     availableLanguage: 'English',
                   },
@@ -217,7 +248,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                     addressCountry: 'GB',
                   },
                   founder: {
-                    '@id': 'https://tombrierley.com/#person',
+                    '@id': 'https://tombrierley.co.uk/#person',
                   },
                   description:
                     'Professional AI development services specializing in OpenAI, LangChain, and AWS Bedrock implementations. Expert in building AI-powered applications, custom models, and intelligent automation systems.',
@@ -247,25 +278,100 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
                 },
                 {
                   '@type': 'WebSite',
-                  '@id': 'https://tombrierley.com/#website',
-                  url: 'https://tombrierley.com',
-                  name: 'Tom Brierley - AI Developer London',
+                  '@id': 'https://tombrierley.co.uk/#website',
+                  url: 'https://tombrierley.co.uk',
+                  name: 'Tom Brierley - Software Engineer & Developer London',
                   description:
-                    'Portfolio and services of Tom Brierley, London-based AI Developer specializing in OpenAI, LangChain, and AWS Bedrock applications.',
+                    'Portfolio and services of Tom Brierley, London-based Software Engineer & Developer specialising in AI integrations and custom trained models, with expertise in OpenAI, LangChain, and AWS Bedrock applications.',
                   publisher: {
-                    '@id': 'https://tombrierley.com/#person',
+                    '@id': 'https://tombrierley.co.uk/#person',
                   },
                   potentialAction: {
                     '@type': 'SearchAction',
                     target: {
                       '@type': 'EntryPoint',
-                      urlTemplate: 'https://tombrierley.com/?s={search_term_string}',
+                      urlTemplate:
+                        'https://tombrierley.co.uk/?s={search_term_string}',
                     },
                     'query-input': 'required name=search_term_string',
                   },
                   mainEntity: {
-                    '@id': 'https://tombrierley.com/#person',
+                    '@id': 'https://tombrierley.co.uk/#person',
                   },
+                },
+                {
+                  '@type': 'ProfessionalService',
+                  '@id': 'https://tombrierley.co.uk/#service',
+                  name: 'AI Integration & Custom Model Development Services',
+                  provider: {
+                    '@id': 'https://tombrierley.co.uk/#person',
+                  },
+                  serviceType: 'Software Development',
+                  areaServed: {
+                    '@type': 'Country',
+                    name: 'United Kingdom',
+                  },
+                  availableChannel: {
+                    '@type': 'ServiceChannel',
+                    serviceUrl: 'https://tombrierley.co.uk/#start-project',
+                    providesService: {
+                      '@type': 'Service',
+                      name: 'AI Integration Consulting',
+                    },
+                  },
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'AI Development Services',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'AI-Powered Application Development',
+                          description:
+                            'Custom AI applications using OpenAI, LangChain, and AWS Bedrock',
+                        },
+                      },
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Custom AI Model Development',
+                          description:
+                            'Domain-specific AI models using RAG and PEFT techniques',
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  '@type': 'Article',
+                  '@id': 'https://tombrierley.co.uk/#portfolio',
+                  headline:
+                    'Tom Brierley - Software Engineer & Developer Portfolio',
+                  description:
+                    'Professional portfolio showcasing AI integration expertise, custom model development, and software engineering services.',
+                  author: {
+                    '@id': 'https://tombrierley.co.uk/#person',
+                  },
+                  publisher: {
+                    '@id': 'https://tombrierley.co.uk/#organization',
+                  },
+                  mainEntityOfPage: 'https://tombrierley.co.uk',
+                  datePublished: '2024-01-01',
+                  dateModified: '2024-12-07',
+                  articleSection: 'Technology',
+                  keywords: [
+                    'AI Integration',
+                    'Custom AI Models',
+                    'Software Engineering',
+                    'OpenAI',
+                    'LangChain',
+                    'AWS Bedrock',
+                    'React',
+                    'TypeScript',
+                    'London Developer',
+                  ],
                 },
               ],
             }),
@@ -273,7 +379,16 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         />
       </head>
       <body>
-        <Providers>{children}</Providers>
+        <div id="skip-links" style={{ position: 'absolute' }}>
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+        </div>
+        <Providers>
+          <main id="main-content" role="main">
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   );

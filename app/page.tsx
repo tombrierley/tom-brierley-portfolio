@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Section size="medium" setThemeOnEntry="dark">
-        <header>
+        <header role="banner">
           <Typography as="h1" type="h1" line marginBottomLarge>
             {introduction}
           </Typography>
@@ -47,19 +47,28 @@ export default function Home(): JSX.Element {
         </header>
       </Section>
 
-      <Section size="medium" setThemeOnEntry="dark">
-        <Typography as="h2" type="h1" line>
+      <Section size="medium" setThemeOnEntry="dark" id="services">
+        <Typography as="h2" type="h1" line id="services-heading">
           Services
         </Typography>
       </Section>
 
-      <div itemScope itemType="https://schema.org/ProfessionalService">
+      <section 
+        itemScope 
+        itemType="https://schema.org/ProfessionalService"
+        aria-labelledby="services-heading"
+      >
         {services.map((service, index) => (
           <Section key={index} size="medium" setThemeOnEntry="light">
-            <article itemScope itemType="https://schema.org/Service">
+            <article 
+              itemScope 
+              itemType="https://schema.org/Service"
+              role="article"
+              aria-labelledby={`service-${index}-heading`}
+            >
               <ServicesList>
                 <Typography as="h3" type="h2" marginBottom>
-                  <span itemProp="name">{service.title}</span>
+                  <span itemProp="name" id={`service-${index}-heading`}>{service.title}</span>
                 </Typography>
 
                 <Typography
@@ -86,9 +95,9 @@ export default function Home(): JSX.Element {
             </article>
           </Section>
         ))}
-      </div>
+      </section>
 
-      <Section size="medium" setThemeOnEntry="light">
+      <Section size="medium" setThemeOnEntry="light" id="how-i-work">
         <Typography as="h2" type="h1" line marginBottomLarge>
           How I Work
         </Typography>
@@ -118,7 +127,7 @@ export default function Home(): JSX.Element {
         </div>
       </Section>
 
-      <Section size="medium" setThemeOnEntry="light">
+      <Section size="medium" setThemeOnEntry="light" id="technologies">
         <Typography as="h2" type="h1" line marginBottomLarge>
           Technologies Used
         </Typography>
@@ -159,7 +168,7 @@ export default function Home(): JSX.Element {
         </div>
       </Section>
 
-      <Section size="medium" setThemeOnEntry="light">
+      <Section size="medium" setThemeOnEntry="light" id="clients">
         <Typography as="h2" type="h1" line marginBottomLarge>
           Clients Include
         </Typography>
@@ -183,7 +192,7 @@ export default function Home(): JSX.Element {
         </div>
       </Section>
 
-      <Section size="medium" setThemeOnEntry="light">
+      <Section size="medium" setThemeOnEntry="light" id="start-project">
         <Typography as="h2" type="h1" line marginBottom>
           Start a Project
         </Typography>
@@ -201,7 +210,7 @@ export default function Home(): JSX.Element {
         </Typography>
       </Section>
 
-      <Section size="medium" setThemeOnEntry="light">
+      <Section size="medium" setThemeOnEntry="light" id="faq">
         <Typography as="h2" type="h1" line marginBottomLarge>
           Frequently Asked Questions
         </Typography>
@@ -316,7 +325,7 @@ export default function Home(): JSX.Element {
             itemProp="mainEntity"
           >
             <Typography as="h3" type="h2" marginBottom itemProp="name">
-              What does it cost to hire you as an AI Developer?
+              What does it cost to hire you as a Software Engineer & Developer specialising in AI?
             </Typography>
             <div
               itemScope
@@ -344,12 +353,12 @@ export default function Home(): JSX.Element {
             '@graph': [
               {
                 '@type': 'Service',
-                '@id': 'https://tombrierley.com/#ai-development-service',
+                '@id': 'https://tombrierley.co.uk/#ai-development-service',
                 name: 'AI Development Services',
                 description:
                   'Professional AI development services including OpenAI integration, LangChain development, and custom AI applications',
                 provider: {
-                  '@id': 'https://tombrierley.com/#person',
+                  '@id': 'https://tombrierley.co.uk/#person',
                 },
                 areaServed: ['London', 'United Kingdom', 'Remote'],
                 serviceType: 'AI Development',

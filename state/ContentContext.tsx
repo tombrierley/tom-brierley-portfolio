@@ -5,15 +5,15 @@ import { Content } from '../types';
 
 const initialContent: Content = {
   name: 'Tom Brierley',
-  contactEmail: 'hello@tombrierley.com',
+  contactEmail: 'hello@tombrierley.co.uk',
   location: 'London, UK',
-  introduction: `Hi, I'm Tom Brierley, an AI Developer based in London, UK, with over 10 years' industry experience. I help businesses harness AI to create intelligent, efficient, and user-friendly products.`,
+  introduction: `Hi, I'm Tom Brierley, a Software Engineer & Developer based in London, UK, with over 10 years' industry experience specialising in AI integrations and custom trained models. I help businesses harness AI to create intelligent, efficient, and user-friendly products.`,
   introText: `I build AI-powered applications that combine advanced AI capabilities with clean, scalable code and thoughtful design. I specialise in rapid prototyping, turning business challenges into tangible solutions, and delivering AI systems that are practical, high-impact, and seamlessly integrated into operations.`,
   services: [
     {
       title: 'AI-Assisted Software Development',
       description:
-        'As a London-based AI Developer, I use AI tools strategically to accelerate software development. I focus on automating repetitive tasks, improving workflows, and building robust, maintainable applications.',
+        'As a London-based Software Engineer & Developer specialising in AI integrations, I use AI tools strategically to accelerate software development. I focus on automating repetitive tasks, improving workflows, and building robust, maintainable applications.',
       details: [
         'AI-assisted feature development and enhancements',
         'Rapid prototyping & MVP builds',
@@ -142,12 +142,12 @@ const initialContent: Content = {
     { name: 'Leon' },
   ],
   metaTitle:
-    'Tom Brierley - AI Developer London | Expert in OpenAI, LangChain & AWS Bedrock',
+    'Tom Brierley - Software Engineer & Developer London | AI Integrations & Custom Models Expert',
   metaDescription:
-    'London-based AI Developer with 14+ years experience. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock. Specializing in rapid prototyping, intelligent agents, and seamless AI integration for businesses.',
-  startProjectText: `If you're looking for an AI Developer in London or the UK to bring AI capabilities into your business, I'd love to discuss your project. Whether it's building AI-powered applications, custom models, or intelligent automation workflows, I focus on delivering practical, high-impact AI solutions. Get in touch via the contact form on my portfolio site to start the conversation and explore how AI can transform your business.`,
+    'London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models. I build AI-powered applications using OpenAI, LangChain, and AWS Bedrock.',
+  startProjectText: `If you're looking for a Software Engineer & Developer in London or the UK specialising in AI integrations and custom trained models to bring AI capabilities into your business, I'd love to discuss your project. Whether it's building AI-powered applications, custom models, or intelligent automation workflows, I focus on delivering practical, high-impact AI solutions. Get in touch via the contact form on my portfolio site to start the conversation and explore how AI can transform your business.`,
   // Legacy properties for backward compatibility
-  intro: `Hi, I'm Tom Brierley, an AI Developer based in London, UK, with over 14 years' industry experience.`,
+  intro: `Hi, I'm Tom Brierley, a Software Engineer & Developer based in London, UK, with over 14 years' industry experience specialising in AI integrations and custom trained models.`,
   about: `I help businesses harness AI to create intelligent, efficient, and user-friendly products. I build AI-powered applications that combine advanced AI capabilities with clean, scalable code and thoughtful design.`,
   howIWork: `My approach is practical, results-driven, and focused on delivering tangible AI solutions quickly.`,
   interests: [

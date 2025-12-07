@@ -1,0 +1,28 @@
+{
+  "name": "Tom Brierley - Software Engineer & Developer",
+  "short_name": "Tom Brierley",
+  "description": "London-based Software Engineer & Developer with 10+ years experience specialising in AI integrations and custom trained models.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "categories": ["business", "technology", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
